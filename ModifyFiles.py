@@ -48,6 +48,10 @@ def modify_file(path, dir_path):
         return "Erreur"
 
 def convert(event):
+    global dest
+    if not dest:
+        tk.messagebox.showerror("Erreur", f"Le dossier de destination \nn'est pas présent")
+        return
     for child in result_box.get_children():
         if result_box.item(child)['values'][1] != "Termine":
             res = modify_file(result_box.item(child)['values'][0], result_box.item(child)['values'][2])
