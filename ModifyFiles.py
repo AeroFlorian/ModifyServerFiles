@@ -86,7 +86,7 @@ def load_dir(event):
 
 
 if __name__ == "__main__":
-    uu.decode('fs_ico_encoded', 'fs.ico')
+    #uu.decode('fs_ico_encoded', 'fs.ico')
     window = tk.Tk()
     s = ttk.Style()
 
@@ -98,8 +98,8 @@ if __name__ == "__main__":
           background=fixed_map('background'))
     # end workaround
     window.title('ModifyServerFiles')
-    window.wm_iconbitmap('fs.ico')
-    window.iconbitmap('fs.ico')
+    #window.wm_iconbitmap('fs.ico')
+    #window.iconbitmap('fs.ico')
     window.state('zoomed')
     result_box = ttk.Treeview(master=window, height=25)
     result_box["columns"] = ("Chemin", "Etat", "Destination")
