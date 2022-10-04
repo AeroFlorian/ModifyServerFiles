@@ -33,7 +33,7 @@ def modify_file(path, dir_path):
 
         for line_E, line_K in zip(lines_E, lines_K):
             product_E = line_E.split(' ')[0][1:]
-            product_K = [l for l in line_K.split(' ') if len(l)][1]
+            product_K = [l for l in line_K.split('    ') if len(l)][0]
             line_K = line_K.replace(product_K + ' ' * (len(product_E) + 1), f"{product_K}#{product_E}")
 
             output.append(line_K)
